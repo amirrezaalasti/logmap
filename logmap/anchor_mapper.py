@@ -55,6 +55,7 @@ class AnchorMapper:
         Compute the structural confidence between two ontology nodes.
         """
         def canonical(n):
+            # TODO: check if this is the right way to get the local name
             if getattr(n, 'label', None) and n.label:
                 return n.label[0]
             elif hasattr(n, 'iri'):
